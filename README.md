@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+MCMC Visualizer
 
-## Getting Started
+An interactive web application that visualizes how various Markov Chain Monte Carlo (MCMC) algorithms explore probability distributions.
 
-First, run the development server:
+Designed for students, data scientists, and researchers to gain intuition about sampling efficiency, tuning parameters, and the behavior of different samplers in 2D space.
 
-```bash
+(Replace this link with an actual screenshot of your app)
+
+🚀 Features
+
+6 Algorithms Implemented:
+
+Random Walk Metropolis (RWM)
+
+Independent Metropolis-Hastings
+
+Slice Sampling
+
+Elliptical Slice Sampling
+
+Hit-and-Run Sampler
+
+Hamiltonian Monte Carlo (HMC)
+
+4 Target Distributions: Gaussian, Bimodal Mixture, Donut, and Banana (Rosenbrock).
+
+Real-time Visualization: Watch chains evolve step-by-step on a heatmap of the target density.
+
+Interactive Tuning: Adjust step sizes, leapfrog steps, and speed/epsilon on the fly.
+
+Modern UI: Built with a glassmorphism aesthetic using standard CSS.
+
+🛠️ Tech Stack
+
+Framework: Next.js (App Router)
+
+Language: TypeScript
+
+Styling: Pure CSS (CSS-in-JS via styled-jsx)
+
+Icons: Lucide React
+
+Rendering: HTML5 Canvas API (for high-performance particle rendering)
+
+📦 Getting Started
+
+Follow these steps to run the project locally on your machine.
+
+Prerequisites
+
+Node.js (v18 or higher)
+
+npm (comes with Node.js)
+
+Installation
+
+Clone the repository:
+
+git clone [https://github.com/your-username/mcmc-visualizer.git](https://github.com/your-username/mcmc-visualizer.git)
+cd mcmc-visualizer
+
+
+Install dependencies:
+
+npm install
+
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open your browser:
+Navigate to http://localhost:3000 to see the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🎮 How to Use
 
-## Learn More
+Select an Algorithm: Use the left sidebar to switch between different samplers.
 
-To learn more about Next.js, take a look at the following resources:
+Choose a Target: Use the dropdown at the top to change the probability distribution (e.g., try "Donut" to see where HMC shines!).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run: Click the Start button.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Experiment: Use the right-hand panel to tweak parameters like Step Size or Leapfrog Steps while the simulation is running to see the immediate effect on acceptance rates and exploration.
 
-## Deploy on Vercel
+📂 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+src/app/page.tsx: The entry point of the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/app/MCMCSimulator.tsx: The main component containing all simulation logic, math functions, and UI rendering.
+
+🤝 Contributing
+
+Contributions are welcome! If you want to add a new algorithm (e.g., NUTS, Langevin Dynamics) or a new target density:
+
+Fork the repo.
+
+Create a feature branch.
+
+Submit a Pull Request.
+
+📝 License
+
+This project is open source and available under the MIT License.
